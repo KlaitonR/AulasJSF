@@ -1,0 +1,14 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼ü†Ï
+F
+java:S1128"0Remove this unused import 'javax.inject.Inject'.(ì–íÔ
+Q
+java:S1128";Remove this unused import 'javax.annotation.PostConstruct'.(›ÅÁ
+T
+java:S1128"7Remove this unused import 'java.text.SimpleDateFormat'.(ú¡ÙÛ8áÊıµ/
+O
+java:S1128"4Remove this unused import 'org.omnifaces.cdi.Param'.(¶œÄòûÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¹ß€ïúÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(şêáüÿÿÿÿ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(¶ƒ¶{
+S	java:S106"9Replace this use of System.out or System.err by a logger.(üÛøÿÿÿÿ

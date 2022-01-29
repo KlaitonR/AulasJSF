@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+    <h:outputLabel value="Chegamos"/><br/>
+
+    #{(soma -> soma + num) (10)}<br/>
+    #{((v1,v2,v3) -> v1*v2*v3) (1,5,10)}<br/>
+    #{cubo=(x->x*x*x)}<br/>
+    #{cubo(10)}
+
+    <h:form id="form">
+        <h:commandButton value="Calcular Cubo"
+                         actionListener="#{estudanteRegistrarWebBean.calcularCubo((x->x*x*x),10)}"/>
+    </h:form>
+
+    <!--Lista-->
+    <ui:repeat value="#{['Klaiton','kkkkk']}" var="nome">
+        #{nome}
+    </ui:repeat><br/>
+
+    <!--Sets-->
+    <ui:repeat value="#{{'Klaiton','kkkkk'}}" var="nome">
+        #{nome}
+    </ui:repeat><br/>
+
+    Maps
+    <ui:repeat value="#{{'Klaiton':'Ricken','kkkkk':'Muito Foda'}}" var="nome">
+        <ui:repeat value ="#{nome.entrySet().toArray()}" var="entry">
+            #{entry.key} - #{entry.value}
+        </ui:repeat>
+    </ui:repeat><br/>
+
+    <ui:repeat value="#{[1,2,3,4,5,6,7,8,9,10].stream().filter(v-> v>5).toList()}" var="result">
+        #{result}
+    </ui:repeat><br/>
+
+    <ui:repeat value="#{numeroList.stream().filter(v-> v>5).toList()}" var="result">
+        #{result}
+    </ui:repeat><br/>
+
+    <h:outputText value="#{testeRequestBean.personagensSelecionado}"/>
+
+</h:body>
+
+</html>

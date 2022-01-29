@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <h:outputStylesheet library="default" name="css/style.css"/>
+    <h:outputScript library="default" name="js/main.js"/>
+    <!--[localePrefix/][libraryName/]resourceName[/resourceVersion]-->
+    <!-- \d+(_\d+)* 1_0, 1_1, 1_2, 1_2_1  -->
+</h:head>
+
+<h:body>
+    <h:form id="form1">
+        <h:panelGrid columns="1">
+            <h:inputText value="#{viewExpiredTesteBean.nome}"/>
+            <h:graphicImage library="default" name="images/ce9e3ab1c6f9ca04de8ca88f03b95eed.jpg"/>
+            <h:commandButton value="Save" action="#{viewExpiredTesteBean.save}" styleClass="btn"/>
+            <h:commandButton value="Invalidar sessão" action="#{viewExpiredTesteBean.invalidateSession}"/>
+        </h:panelGrid>
+    </h:form>
+</h:body>
+
+</html>

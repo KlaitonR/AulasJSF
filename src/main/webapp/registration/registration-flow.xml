@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                                  http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <flow-definition id="registration">
+
+        <!--Apenas um flow, usa uma página de entrada diferente da padrão-->
+        <start-node>regitrationInicio</start-node>
+        <view id="regitrationInicio">
+            <vdl-document>/registration/registration1.xhtml</vdl-document>
+        </view>
+
+        <flow-call id="callPendencies">
+            <flow-reference>
+                <flow-id>pendencies</flow-id>
+            </flow-reference>
+            <outbound-parameter>
+                <name>userName</name>
+                <value>#{testeFlowBean.nome}</value>
+            </outbound-parameter>
+            <outbound-parameter>
+                <name>userSurname</name>
+                <value>#{testeFlowBean.sobrenome}</value>
+            </outbound-parameter>
+        </flow-call>
+
+<!--   VALIDAD SE O USUÁRIO PODE IR PARA A PRÓXIMA PÁGINA-->
+        <switch  id="registrationPage2">
+            <case>
+                <if>#{not empty testeFlowBean.nome and not empty testeFlowBean.sobrenome}</if>
+                <from-outcome>registration2</from-outcome> <!--Retorna para a página desejada-->
+            </case>
+            <default-outcome>regitrationInicio</default-outcome> <!--Retorna para uma página se o if falhar-->
+        </switch>
+
+<!--        PÁGINAS DE RETORNO-->
+        <flow-return id="exitToInicio">
+            <from-outcome>/inicioFlow.xhtml</from-outcome>
+        </flow-return>
+        <flow-return id="exitToIndex">
+            <from-outcome>/index.xhtml</from-outcome>
+        </flow-return>
+
+<!--        SERÁ CHAMADA INDEPENDENTE DO FLOW RETORN-->
+        <finalizer>#{testeFlowBean.salvar()}</finalizer>
+    </flow-definition>
+
+
+</faces-config>

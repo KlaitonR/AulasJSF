@@ -1,0 +1,7 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–¼ø8Ê·ñ¤¹/
+i
+java:S5998"LRefactor this repetition that can lead to a stack overflow for large inputs.(§çØï8“äñ¤¹/
+}
+java:S5996"`Remove or replace this boundary that will never match because it appears before mandatory input.(§çØï8ò¥ÏÍ¹/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¹ß€ïúÿÿÿÿ8Ò·ñ¤¹/

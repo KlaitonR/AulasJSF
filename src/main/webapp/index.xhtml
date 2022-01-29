@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+</h:head>
+<body>
+
+    <p:importEnum type="com.example.AppJSF.model.enums.Turno" var="Turno"
+                  allSuffix="ALL_ENUM_VALUES"/>
+
+    <h:outputLabel value="Hello, World"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.sobrenome}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.nota1 eq estudanteRegistrarWebBean.estudante.nota3}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.nota1 == estudanteRegistrarWebBean.estudante.nota3 and estudanteRegistrarWebBean.estudante.nome.equals('Klaiton')}"/><br/>
+    <h:outputText value="Comparação notas"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.nota1 le estudanteRegistrarWebBean.estudante.nota3}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.nota1 eq 0 ? 'ZERO' : 'ACIMA DE ZERO'}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.nota1 = 20}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.nome += ' ' += estudanteRegistrarWebBean.estudante.sobrenome}"/><br/>
+    <!--lt -> menor
+    le -> menor igual-->
+    <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.turno eq Turno.MATUTINO}"/><br/>
+    <!--Listas-->
+    <h:outputLabel value="#{estudanteRegistrarWebBean.nomes}"/><br/>
+    <ui:repeat value="#{estudanteRegistrarWebBean.nomes}" var =  "nomes">
+        <h:outputLabel value="#{nomes}"/> <br/>
+    </ui:repeat>
+    <!--SETS-->
+    <ui:repeat value="#{estudanteRegistrarWebBean.nomesSet.toArray()}" var="nomeSet">
+        <h:outputLabel value="#{nomeSet}"/><br/>
+    </ui:repeat>
+    <!--MAP-->
+    <h:outputLabel value="#{estudanteRegistrarWebBean.nomesMap.get('Klaiton')}"/><br/>
+<!--    <ui:repeat value="#{estudanteRegistrarWebBean.nomesMap.entrySet().toArray()}" var="entry">-->
+<!--        <h:outputLabel value="#{entry.get()} - #{entry.values}"/><br/>-->
+<!--       </ui:repeat> -->
+<!--    #{estudanteRegistrarWebBean.executar()}-->
+<!--    #{estudanteRegistrarWebBean.executar("Coroi mlk")}-->
+<!--    #{estudanteRegistrarWebBean.executar(estudanteRegistrarWebBean.estudante.nome)}-->
+<!--    #{estudanteRegistrarWebBean.executarRetorno(estudanteRegistrarWebBean.estudante.nome)}-->
+    <h:form>
+        <h:commandButton value="executar" action="#{estudanteRegistrarWebBean.irParaIndex2()}"/>
+        <h:commandButton value="Printar" onclick="print('#{estudanteRegistrarWebBean.estudante.nome}')"/>
+    </h:form>
+
+<!--    Imprimindo CSS com expresio EL-->
+    <ui:repeat value="#{estudanteRegistrarWebBean.nomes}" var =  "nomes" varStatus="status">
+        <h:outputLabel value="#{nomes}" style="color:  #{status.index mod 2 == 0 ? 'red' : 'green'}"/> <br/>
+    </ui:repeat>
+
+    <br/>
+    <h:form id = "form">
+        <h:commandButton value="Exibir Notas">
+            <f:ajax listener="#{estudanteRegistrarWebBean.exibirNotas()}" render="notasGrid"/>
+        </h:commandButton>
+        <h:panelGrid id = "notasGrid">
+            <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.nome}"/><br/>
+            <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.sobrenome}"/><br/>
+            <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.turno}"/><br/>
+            <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.nota1}"
+                           rendered="#{estudanteRegistrarWebBean.mostrarNotas}"/><br/>
+            <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.nota2}"
+                           rendered="#{estudanteRegistrarWebBean.mostrarNotas}"/><br/>
+            <h:outputLabel value="#{estudanteRegistrarWebBean.estudante.nota3}"
+                           rendered="#{estudanteRegistrarWebBean.mostrarNotas}"/><br/>
+        </h:panelGrid>
+    </h:form>
+
+    <script type="text/javascript">
+        function print(print){
+            alert(print);
+        }
+    </script>
+
+</body>
+
+</html>

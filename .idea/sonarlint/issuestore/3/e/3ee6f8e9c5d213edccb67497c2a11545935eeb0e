@@ -1,0 +1,34 @@
+
+d
+java:S1192"ODefine a constant instead of duplicating this literal "Processando..." 3 times.(»¸¬
+_
+java:S1192 "IDefine a constant instead of duplicating this literal "Exibindo" 3 times.(üŸ—Ì
+g
+java:S1192"LDefine a constant instead of duplicating this literal "Buscando..." 3 times.(¦®èÕÿÿÿÿÿ
+^
+java:S1192"HDefine a constant instead of duplicating this literal "Klaiton" 3 times.(¢”ÁŒ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ñ¬¹ı
+E
+java:S54117"*Use the primitive boolean expression here.(½ì²ëıÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(Õáƒ‚úÿÿÿÿ
+A
+java:S1948"+Make "estudante" transient or serializable.(Ê“çï
+t
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¦®èÕÿÿÿÿÿ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(»¸¬
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(üŸ—Ì
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(¦®èÕÿÿÿÿÿ
+M	java:S106%"9Replace this use of System.out or System.err by a logger.(»¸¬
+N	java:S106&"9Replace this use of System.out or System.err by a logger.(üŸ—Ì
+N	java:S106'"9Replace this use of System.out or System.err by a logger.(Ô‘³
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(¦®èÕÿÿÿÿÿ
+M	java:S106,"9Replace this use of System.out or System.err by a logger.(»¸¬
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(üŸ—Ì
+N	java:S106."9Replace this use of System.out or System.err by a logger.(Ô‘³
+T
+java:S34003"9Remove this method and declare a constant for this value.(”ş¨Ğøÿÿÿÿ
+U
+java:S1854>":Remove this useless assignment to local variable "result".(»áøÿÿÿÿ
+F
+java:S1481>"+Remove this unused "result" local variable.(»áøÿÿÿÿ

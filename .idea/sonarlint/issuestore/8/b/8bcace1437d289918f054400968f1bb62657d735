@@ -1,0 +1,11 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùÅıÙÿÿÿÿÿ
+A
+java:S1948"&Make "file" transient or serializable.(éƒñšıÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ĞÒô
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Õ§îşÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(›Ğà³
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ú³ºŒ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(İ‹Úöúÿÿÿÿ
+W
+java:S1075""ARefactor your code to get this URI from a customizable parameter.(ù®«×

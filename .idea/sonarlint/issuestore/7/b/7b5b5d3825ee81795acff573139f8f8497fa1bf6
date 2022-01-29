@@ -1,0 +1,13 @@
+
+f
+java:S1192"IDefine a constant instead of duplicating this literal "EXECUTE " 3 times.(ºöãÙ8áöÒµ/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼ü†Ï
+H
+java:S1948"+Make "estudante" transient or serializable.(Ê“çï8¿ÙõÒµ/
+N
+java:S1948",Make "estudante2" transient or serializable.(ƒ„÷’ùÿÿÿÿ8¿®öÒµ/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ºöãÙ8¼µäÒµ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(–ö†üÿÿÿÿ8×ÒåÒµ/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Õ”8¯ÂìÒµ/
+T	java:S106-"9Replace this use of System.out or System.err by a logger.(Ïîú[8•ĞíÒµ/
+U	java:S1066"9Replace this use of System.out or System.err by a logger.(Ñ¹ì¶8®áöÒµ/
